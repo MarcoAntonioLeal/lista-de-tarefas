@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {line-height: 1.5;}
+
+/* header.ejs */
+header {
+    max-width: 21rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid;
+}
+
+#btnTheme {
+    height: 40px;
+    width: 55px;
+}
+
+a:not(.btn-sm) {
+    text-decoration: none; 
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* index.ejs */
+ol {padding: 0;}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+/* criarLista.ejs */
+main {
+    display: flex;
+    gap: 6rem;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+ #sec-criar-lista {
+    width: 32.375rem;
+ }
+
+#formCriarLista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#formCriarLista input {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+}
+
+.input-transparente {
+    background-color: transparent;
+}
+
+input#tituloTarefa {
+    font-size: larger;
+}
+
+.input-lista {
+    max-width: 32.375rem;
+}
+
+table th, td {
+    text-align: center; 
+    vertical-align: middle;
+}
+
+.t-criar-lista {margin-top: 2rem;}
+
+.btn-criar {width: 10rem}
+
+/* editarLista.ejs */
+.success:has(input:checked) {background-color: #d1e7dd;}
+.warning:has(input:checked) {background-color: #fff3cd;}
+.danger:has(input:checked) {background-color: #F8D7DA;}
+
+@media screen and (max-width: 980px) {
+    header {
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+    
+    main {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 560px) {
+   #sec-criar-lista {
+        display: flex;
+        overflow-x: scroll;    
+   }
+}

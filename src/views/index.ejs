@@ -1,0 +1,50 @@
+<div>
+    <h1>Listas de Tarefas</h1>
+    <p id="msgAjuda"></p>
+
+    <ol>
+        <% listas.forEach(lista => { %>
+            <li class="input-lista mb-2">
+                <%= lista.titulo %>
+
+                <div class="d-flex gap-3">
+                    <a href="/organizar-tarefa/<%= lista.id %>" class="btn btn-success btn-sm">
+                        Organizar
+                    </a>
+                    
+                    <form action="/excluir-lista/<%= lista.id %>" method="post">
+                        <!--Modal p/ confimar ou não a exclusão-->
+                        <button type="button" class="btn btn-danger btn-excluir btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            Excluir
+                        </button>
+                    </form>
+                </div>
+
+            </li>
+        <% }) %>
+    </ol>
+</div>
+
+<a href="/nova-lista" class="nav-pag text-warning">Nova Lista de Tarefas</a>
+
+<!--Corpo do Modal-->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-body text-start">
+                Deseja mesmo excluir essa lista ?
+            </div>
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-confirm" data-bs-dismiss="modal" data-confirma="true">
+                    Confirmar
+                </button>
+
+                <button type="button" class="btn btn-secondary btn-confirm" data-bs-dismiss="modal">
+                    Voltar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

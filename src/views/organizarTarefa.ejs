@@ -1,0 +1,73 @@
+<div>
+    <h1>
+        <%= lista.titulo %>
+    </h1>
+
+    <br>
+
+    <form action="/salvar-tarefa/<%= lista.id %>" method="post">
+        <table class="table border-secondary table-hover input-lista">
+            <thead>
+                <tr>
+                    <th>
+                        Tarefa
+                    </th>
+
+                    <th>
+                        Data / Horário
+                    </th>
+
+                    <th style="background-color: #d1e7dd;" class="text-success-emphasis">
+                        OK
+                    </th>
+
+                    <th style="background-color: #fff3cd;" class="text-warning-emphasis">
+                        Adiar
+                    </th>
+
+                    <th style="background-color: #F8D7DA;" class="text-danger-emphasis">
+                        Não Fazer
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <% for(let i = 0; i < lista.tarefas.length; i++) { %>
+                    <tr>
+                        <td>
+                            <%= lista.tarefas[i] %>
+                        </td>
+
+                        <td>
+                            <%= lista.dataHora[i] %>
+                        </td>
+
+                        <td class="success">
+                            <input type="radio" class="form-check-input" name="status[<%= i %>]" value="success" 
+                            <% if(lista.status[i] === 'success') { %>
+                                checked 
+                            <% } %>>
+                        </td>
+
+                        <td class="warning">
+                            <input type="radio" class="form-check-input" name="status[<%= i %>]" value="warning" 
+                            <% if(lista.status[i] === 'warning') { %> 
+                                checked 
+                            <% } %>>
+                        </td>
+
+                        <td class="danger">
+                            <input type="radio" class="form-check-input" name="status[<%= i %>]" value="danger" <% if(lista.status[i] === 'danger') { %> 
+                                checked 
+                            <% } %>>
+                        </td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+
+        <input type="submit" value="Salvar" class="btn btn-primary btn-criar mb-4" id="btn-salvar">
+    </form>
+</div>
+
+<a href="/" class="nav-pag text-warning">Voltar para página inicial</a>

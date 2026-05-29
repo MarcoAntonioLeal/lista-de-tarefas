@@ -1,0 +1,111 @@
+<main>
+    <section>
+        <form action="#" id="confirmLista">
+
+            <div class="mb-3">
+                <h1>Nova Lista de Tarefas</h1>
+
+                <label for="titulo" class="form-label">
+                    Título da lista:
+                </label>
+                <input type="text" name="" id="titulo" autofocus required class="form-control input-lista"
+                    placeholder="Coloque o título da sua lista">
+            </div>
+
+            <div class="mb-3">
+                <label for="tarefa" class="form-label">
+                    Nome da tarefa:
+                </label>
+                <input type="text" id="tarefa" class="form-control input-lista" placeholder="Qual será a sua tarefa" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="dataHora" class="form-label">
+                    Data e hora da tarefa:
+                </label>
+                <input type="datetime-local" id="dataHora" required class="form-control input-lista">
+            </div>
+
+            <div class="footer">
+                <a href="/" class="nav-pag text-warning">Voltar</a>
+                <button type="submit" class="btn btn-primary">
+                    Confirmar
+                </button>
+            </div>
+        </form>
+    </section>
+
+
+    <section id="sec-criar-lista">
+        <form action="/criar-lista" method="post" id="formCriarLista">
+
+            <input type="text" name="titulo" readonly autofocus='false' id="tituloTarefa" class="input-transparente t-criar-lista">
+
+            <br>
+
+            <table class="table table-bordered border-secondary table-hover">
+                <thead>
+                    <tr>
+                        <th>
+                            Tarefa
+                        </th>
+
+                        <th>
+                            Data / Horário
+                        </th>
+
+                        <th>
+                            Excluir
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody></tbody>
+            </table>
+
+            <!-- Corpo do Modal do botão Excluir Tarefa -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+            
+                        <div class="modal-body text-start">
+                            Deseja mesmo excluir essa tarefa ?
+                        </div>
+            
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary btn-confirm" data-bs-dismiss="modal" data-confirma="true">
+                                Confirmar
+                            </button>
+            
+                            <button type="button" class="btn btn-secondary btn-confirm" data-bs-dismiss="modal">
+                                Voltar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-primary btn-criar" data-bs-toggle="modal" data-bs-target="#Backdrop">
+                Criar
+            </button>
+
+        </form>
+
+            <!-- Corpo do Modal do botão Criar Tarefa -->
+            <div class="modal fade" id="Backdrop" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+            
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body text-start">
+                            Por gentileza escolha suas tarefas
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </section>
+</main>

@@ -2,6 +2,12 @@
 
 Aplicação web para criação, gerenciamento e organização de tarefas utilizando **Node.js**, **Express**, **EJS** e arquitetura **MVC**.
 
+<img width="1919" height="465" alt="image" src="https://github.com/user-attachments/assets/4da268ee-7361-4ef1-84fa-4a43afaa1642" />
+
+
+<img width="1919" height="771" alt="image" src="https://github.com/user-attachments/assets/877d142e-4ec4-4632-9228-8c0624cf04be" />
+
+
 🔗 Deploy: https://seu-link-aqui
 
 ---

@@ -13,7 +13,7 @@ Aplicação web para criação, gerenciamento e organização de tarefas utiliza
 
 Acesse o projeto online:
 
-[link](https://lista-de-tarefas-ajkw.onrender.com)/
+[](https://lista-de-tarefas-ajkw.onrender.com)https://lista-de-tarefas-ajkw.onrender.com)/
 
 ---
 

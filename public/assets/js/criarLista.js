@@ -69,14 +69,12 @@ document.addEventListener('click', event => {
     linhaSelecionada = null
 })
 
-formCriarLista.addEventListener('click', event => {
-   
-    const btnCriar = event.target.closest('.btn-criar')
+formCriarLista.addEventListener('submit', event => {
+    event.preventDefault()
 
     if(tbody.children.length === 0) {
         btnCriar.click()
     } else {
-        btnCriar.closest('#formCriarLista').submit()
-
+        formCriarLista.submit()
     }
 })

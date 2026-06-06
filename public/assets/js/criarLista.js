@@ -70,9 +70,9 @@ document.addEventListener('click', event => {
 })
 
 formCriarLista.addEventListener('submit', event => {
-    event.preventDefault()
-
+    
     if(tbody.children.length === 0) {
+        event.preventDefault()
         btnCriar.click()
     } else {
         formCriarLista.submit()

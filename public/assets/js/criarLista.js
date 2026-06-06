@@ -69,11 +69,16 @@ document.addEventListener('click', event => {
     linhaSelecionada = null
 })
 
+const btnCriar = event.target.closest('.btn-criar')
+const modal = new bootstrap.Modal(document.getElementById('Backdrop'))
+
 formCriarLista.addEventListener('click', event => {
    
-    const btnCriar = event.target.closest('.btn-criar')
+    if (tbody.children.length === 0) {
+        modal.show()
+        return
+    }
 
-    if(tbody.children.length === 0) return
-        btnCriar.closest('#formCriarLista').submit()
+    formCriarLista.submit()
 
 })

@@ -50,7 +50,7 @@ main {
 }
 
  #sec-criar-lista {
-    width: 32.375rem;
+    max-width: 32.375rem;
  }
 
 #formCriarLista {

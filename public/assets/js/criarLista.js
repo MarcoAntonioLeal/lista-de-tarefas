@@ -73,10 +73,7 @@ formCriarLista.addEventListener('click', event => {
    
     const btnCriar = event.target.closest('.btn-criar')
 
-    if(tbody.children.length === 0) {
-       return btnCriar.click()
-    } else {
+    if(tbody.children.length === 0) return
         btnCriar.closest('#formCriarLista').submit()
 
-    }
 })

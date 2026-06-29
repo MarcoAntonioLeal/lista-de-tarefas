@@ -2,7 +2,13 @@
 <html lang="pt-br" data-bs-theme="">
 
 <script>
-    const theme = localStorage.getItem("theme") || "dark"
+    let theme = localStorage.getItem("theme")
+
+    if (!theme) {
+        theme = "dark"
+        localStorage.setItem("theme", theme)
+    }
+
     document.documentElement.setAttribute("data-bs-theme", theme)
 </script>
 

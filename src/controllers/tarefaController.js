@@ -10,7 +10,7 @@ const tarefaController = {
         res.render('organizarTarefa', { 
             lista,
             title: 'Organizar Tarefa',
-            script: ''
+            script: '<script src="/assets/js/organizarTarefa.js"></script>'
         })
     },
 

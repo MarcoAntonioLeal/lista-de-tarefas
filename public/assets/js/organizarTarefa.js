@@ -4,15 +4,15 @@ const formSalvarTarefa = document.querySelector('.formSalvarTarefa')
 const modal = new bootstrap.Modal(document.getElementById('salvarTarefa'))
 
 formSalvarTarefa.addEventListener('click', event => {
-    const btnCriar = event.target.closest('.btn-criar')
+    const btnSalvar = event.target.closest('#btn-salvar')
 
-    if(!btnCriar) return
+    if(!btnSalvar) return
    
-    if (tbody.children.length === 0) {
+    if (checkTarefas.value === '') {
         modal.show()
         return
     }
 
-    formCriarLista.submit()
+   formSalvarTarefa.submit()
 
 })

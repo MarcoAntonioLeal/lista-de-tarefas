@@ -1,8 +1,9 @@
 const checkTarefas = document.querySelectorAll('.form-check-input')
+const formSalvarTarefa = document.querySelector('.formSalvarTarefa')
 
-const modal = new bootstrap.Modal(document.getElementById('Backdrop'))
+const modal = new bootstrap.Modal(document.getElementById('salvarTarefa'))
 
-formCriarLista.addEventListener('click', event => {
+formSalvarTarefa.addEventListener('click', event => {
     const btnCriar = event.target.closest('.btn-criar')
 
     if(!btnCriar) return

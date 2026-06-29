@@ -8,7 +8,7 @@ formSalvarTarefa.addEventListener('click', event => {
 
     if(!btnSalvar) return
    
-    if (!checkTarefas.checked) {
+    if (!checkTarefas.checked()) {
         modal.show()
         return
     }

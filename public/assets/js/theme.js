@@ -1,10 +1,10 @@
 const htmlTheme = document.documentElement
 const btn = document.querySelector('#btnTheme')
 
-if(localStorage.getItem('theme') === 'dark' || '') {
+if(localStorage.getItem('theme') === 'dark' || localStorage.getItem('theme') === null) {
     btn.innerHTML = '<i class="bi bi-moon-stars"></i>'
     
-} else if (localStorage.getItem('theme') === 'ligth') {
+} else if (localStorage.getItem('theme') === 'light') {
     btn.innerHTML = '<i class="bi bi-sun"></i>'
     
 }

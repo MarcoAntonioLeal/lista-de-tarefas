@@ -8,10 +8,16 @@ formSalvarTarefa.addEventListener('click', event => {
 
     if(!btnSalvar) return
    
-    if (checkTarefas.checked === false) {
+    checkTarefas.forEach(num => {
+        if(!num.checked) {
+            modal.show()
+            return
+        }
+    })
+    /*if (checkTarefas.checked === false) {
         modal.show()
         return
-    }
+    }*/
 
    formSalvarTarefa.submit()
 

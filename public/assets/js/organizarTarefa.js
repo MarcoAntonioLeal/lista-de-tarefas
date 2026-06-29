@@ -11,8 +11,8 @@ formSalvarTarefa.addEventListener('click', event => {
     checkTarefas.forEach(num => {
         if(!num.checked) {
             modal.show()
-            return
         }
+        return
     })
     /*if (checkTarefas.checked === false) {
         modal.show()
